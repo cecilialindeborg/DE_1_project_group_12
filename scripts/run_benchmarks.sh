@@ -6,5 +6,5 @@
   --conf spark.cores.max=2 \
   --conf spark.pyspark.python=/usr/bin/python3 \
   --conf spark.pyspark.driver.python=/usr/bin/python3 \
-  --py-files config.py,etl_job.py \
-  analysis_job.py
+  --py-files ../src/config.py,../src/etl_job.py \
+  ../src/analysis_job.py
