@@ -37,21 +37,29 @@ The project is configured to run on a Spark cluster. Key configurations can be f
 
 ## Usage
 
-### Prerequisites
+## Usage
 
+### Prerequisites
 - Apache Spark 3.5.1
 - Hadoop/HDFS environment
-- Python 3 with `pyspark` and `stop-words` libraries
+- Python 3.8+
+
+### Installation
+Install the required Python dependencies using the provided `requirements.txt` file:
+
+```bash
+pip install -r requirements.txt
+```
 
 ### Running the Analysis
-
 To execute the Spark job and perform the analysis:
 
 ```bash
 ./scripts/run_benchmarks.sh
 ```
 
-_Note: Ensure you are running this from within the repository root and have access to the Spark master URL specified in the script (`spark://192.168.2.25:7077`)._
+*Note: Ensure you are running this from within the repository root and have access to the Spark master URL specified in the script (`spark://192.168.2.25:7077`).*
+
 
 ## Results
 
