@@ -1,11 +1,13 @@
 from pyspark.sql.functions import col, lower, split, explode, regexp_replace
 from config import HDFS_DATA_PATH, STOPWORDS, SCHEMA
 
-
 def extract_data(spark):
-    """Load raw data from HDFS using the predefined schema."""
-    return spark.read.schema(SCHEMA).json(HDFS_DATA_PATH)
-
+    """
+    Extract data from HDFS
+    """
+    # Read from HDFS
+    df = spark.read.json("hdfs://192.168.2.25:9000/user/ubuntu/data/reddit_data.json")
+    return df
 
 def transform_data(df):
     """Apply cleaning, tokenization, and stopword filtering."""

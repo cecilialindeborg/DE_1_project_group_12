@@ -3,7 +3,6 @@ from pyspark.sql.window import Window
 from pyspark.sql.functions import col, count, row_number
 from etl_job import extract_data, transform_data
 
-
 def run_analysis():
     spark = SparkSession.builder.appName("Reddit_Subreddit_Top_Words").getOrCreate()
 
@@ -39,7 +38,6 @@ def run_analysis():
     final_result.show(30, truncate=False)
 
     spark.stop()
-
 
 if __name__ == "__main__":
     run_analysis()
